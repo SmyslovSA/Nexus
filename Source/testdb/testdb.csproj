@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF90BCA6-7A9F-4F88-9284-CC178CBFA8FC}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nexus.DataProvider</RootNamespace>
-    <AssemblyName>Nexus.DataProvider</AssemblyName>
+    <ProjectGuid>{7ED21BEB-0B5F-4129-853F-3CD3351630CF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>testdb</RootNamespace>
+    <AssemblyName>testdb</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -47,13 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\NexusContext.cs" />
-    <Compile Include="EntityModels\DbCustomer.cs" />
-    <Compile Include="EntityModels\DbGallery.cs" />
-    <Compile Include="EntityModels\DbOrder.cs" />
-    <Compile Include="EntityModels\DbProduct.cs" />
-    <Compile Include="EntityModels\DbSaler.cs" />
-    <Compile Include="EntityModels\DbUser.cs" />
+    <Compile Include="consoleModels\DbCustomer.cs" />
+    <Compile Include="consoleModels\DbGallery.cs" />
+    <Compile Include="consoleModels\DbOrder.cs" />
+    <Compile Include="consoleModels\DbProduct.cs" />
+    <Compile Include="consoleModels\DbSaler.cs" />
+    <Compile Include="consoleModels\DbUser.cs" />
+    <Compile Include="NexusContext.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
