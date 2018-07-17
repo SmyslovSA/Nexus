@@ -1,6 +1,6 @@
 ﻿namespace Nexus.DataProvider.EntityModels
 {
-    public class DbGallery
+    public class Gallery
     {
         public int Id { get; set; }
 
@@ -10,6 +10,6 @@
 
         public int DbSalerId { get; set; }
 
-        public virtual DbSaler DbSaler { get; set; }
+        public virtual Saler DbSaler { get; set; }
     }
 }

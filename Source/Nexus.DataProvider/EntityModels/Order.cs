@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Nexus.DataProvider.EntityModels
 {
-    public class DbOrder
+    public class Order
     {
         public int Id { get; set; }
 
@@ -15,10 +15,10 @@ namespace Nexus.DataProvider.EntityModels
 
         public int OrderNumber { get; set; }
 
-        public List<DbProduct> Products { get; set; }
+        public List<Product> Products { get; set; }
 
         public int DbCustomerId { get; set; }
 
-        public virtual DbCustomer DbCustomer { get; set; }
+        public virtual Customer DbCustomer { get; set; }
     }
 }

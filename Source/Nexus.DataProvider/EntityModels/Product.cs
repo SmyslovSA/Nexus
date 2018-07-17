@@ -1,6 +1,6 @@
 ﻿namespace Nexus.DataProvider.EntityModels
 {
-    public class DbProduct
+    public class Product
     {
         public int Id { get; set; }
 
@@ -18,10 +18,10 @@
 
         public int DbOrderId { get; set; }
 
-        public virtual DbOrder DbOrder { get; set; }
+        public virtual Order DbOrder { get; set; }
 
         public int DbSalerId { get; set; }
 
-        public virtual DbSaler DbSaler { get; set; }
+        public virtual Saler DbSaler { get; set; }
     }
 }

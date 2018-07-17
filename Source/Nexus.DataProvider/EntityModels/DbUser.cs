@@ -16,8 +16,8 @@ namespace Nexus.DataProvider.EntityModels
 
         public string Phone { get; set; }
 
-        public List<DbCustomer> Customer { get; set; }
+        public List<Customer> Customer { get; set; }
 
-        public List<DbSaler> Saler { get; set; }
+        public List<Saler> Saler { get; set; }
     }
 }

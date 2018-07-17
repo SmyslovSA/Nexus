@@ -2,7 +2,7 @@
 
 namespace Nexus.DataProvider.EntityModels
 {
-    public class DbSaler
+    public class Saler
     {
         public int Id { get; set; }
 
@@ -10,9 +10,9 @@ namespace Nexus.DataProvider.EntityModels
 
         public string CompanyName { get; set; }
 
-        public List<DbProduct> Products { get; set; }
+        public List<Product> Products { get; set; }
 
-        public List<DbGallery> Gallery { get; set; }
+        public List<Gallery> Gallery { get; set; }
 
         public int DbUserId { get; set; }
 
