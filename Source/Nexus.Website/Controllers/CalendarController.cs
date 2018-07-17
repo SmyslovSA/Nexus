@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace Nexus.Website.Controllers
 {
-    public class HomeController : Controller
+    public class CalendarController : Controller
     {
+        // GET: Calendar
+        [Authorize(Roles = "saler, customer")]
         public ActionResult Index()
         {
             return View();

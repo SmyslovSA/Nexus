@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace Nexus.Website.Controllers
 {
-    public class HomeController : Controller
+    public class ProfileController : Controller
     {
+        // GET: Profile
+        [Authorize(Roles ="admin,saler,customer")]
         public ActionResult Index()
         {
             return View();
