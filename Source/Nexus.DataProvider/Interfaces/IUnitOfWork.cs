@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Nexus.DataProvider.EntityModels;
+using System;
 
 namespace Nexus.DataProvider.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGalleryRepository GalleryRepository { get; }
-        IOrderRepository OrderRepository { get; }
-        IProductRepository ProductRepository { get; }
+        IBaseRepository<Gallery> GalleryRepository { get; }
+        IBaseRepository<Order> OrderRepository { get; }
+        IBaseRepository<Product> ProductRepository { get; }
         int SaveChanges();
     }
 }

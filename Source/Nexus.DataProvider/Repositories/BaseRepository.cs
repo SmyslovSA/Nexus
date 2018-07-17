@@ -1,36 +1,52 @@
 ﻿using Nexus.DataProvider.Context;
 using Nexus.DataProvider.Interfaces;
-using System;
+using System.Data.Entity;
 
 namespace Nexus.DataProvider.Repositories
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        public BaseRepository(NexusContext context) { }
+        private readonly NexusContext _nexusContext;
+        private readonly DbSet<TEntity> _dbset;
+
+        public BaseRepository(NexusContext context)
+        {
+            _nexusContext = context;
+            _dbset = _nexusContext.Set<TEntity>();
+
+        }
 
         public void Delete<TKey>(TKey id)
         {
-            throw new NotImplementedException();
+            var itemToRemove = _dbset.Find(id);
+            _dbset.Remove(itemToRemove);
         }
 
         public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            if (_nexusContext.Entry(entity).State == EntityState.Detached)
+            {
+                _dbset.Attach(entity);
+            }
+
+            _dbset.Remove(entity);
         }
 
         public TEntity GetById<TKey>(TKey id)
         {
-            throw new NotImplementedException();
+            return _dbset.Find(id);
         }
 
         public void Insert(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbset.Attach(entity);
+            _nexusContext.Entry(entity).State = EntityState.Added;
         }
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbset.Attach(entity);
+            _nexusContext.Entry(entity).State = EntityState.Modified;
         }
     }
 }

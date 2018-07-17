@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201807170923527_FirstNameLastNameAddMigration.Designer.cs">
       <DependentUpon>201807170923527_FirstNameLastNameAddMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807171412336_RemoveFirstNameLastNameMigration.cs" />
+    <Compile Include="Migrations\201807171412336_RemoveFirstNameLastNameMigration.Designer.cs">
+      <DependentUpon>201807171412336_RemoveFirstNameLastNameMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -306,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807170923527_FirstNameLastNameAddMigration.resx">
       <DependentUpon>201807170923527_FirstNameLastNameAddMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171412336_RemoveFirstNameLastNameMigration.resx">
+      <DependentUpon>201807171412336_RemoveFirstNameLastNameMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
